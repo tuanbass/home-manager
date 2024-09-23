@@ -5,9 +5,16 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "tuanba1";
-  home.homeDirectory = "/home/tuanba1";
+  home.username = "tuanbass";
+  home.homeDirectory = "/home/tuanbass";
 
+  # Allow unfree packages
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
 
   imports = [
     ./apps/micro.nix
