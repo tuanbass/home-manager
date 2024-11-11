@@ -1,0 +1,15 @@
+# desktop link to the application
+# copy/link it to /usr/share/applications
+# ln -s ${PWD}/sioyek.desktop /usr/share/applications/sioyek.desktop
+
+[Desktop Entry]
+Version=1.0
+Name=VirtualBox
+Comment=VirtualBox
+# Exec=/home/tuanbass/.nix-profile/bin/VirtualBox
+Exec=sh -c '$HOME/.nix-profile/bin/VirtualBox'
+#Icon=/path/to/audacity_icon.png
+Terminal=false
+Type=Application
+Categories=Document
+

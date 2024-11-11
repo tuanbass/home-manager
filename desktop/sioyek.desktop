@@ -1,0 +1,13 @@
+# desktop link to the application
+# copy/link it to /usr/share/applications
+# ln -s ${PWD}/sioyek.desktop /usr/share/applications/sioyek.desktop
+
+[Desktop Entry]
+Name=Sioyek Pdf
+Comment=Pdf viewer
+Exec=/usr/bin/sioyek
+#Icon=/path/to/audacity_icon.png
+Terminal=false
+Type=Application
+Categories=Document
+
