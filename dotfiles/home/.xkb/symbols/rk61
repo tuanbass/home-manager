@@ -1,0 +1,16 @@
+# Should copy this file to $HOME/.xkb/symbols/rk61
+# full layout: /usr/share/X11/xkb/symbols
+# For key name, can refer here
+# https://www.charvolant.org/doug/xkb/html/node5.html#SECTION00053000000000000000
+# use wev/xev to get symbol name
+default partial alphanumeric_keys
+xkb_symbols "rk61" {
+        include "us"
+        key <CAPS> { [ Escape, Escape ] };
+        key <ESC> { [ grave, asciitilde ] };
+        key <RCTL> { [ Caps_Lock, Caps_Lock ] };
+        key <PAUS> { [ Print, Print ] };
+      
+};
+
+
