@@ -20,6 +20,7 @@
     ./apps/micro.nix
     ./apps/sioyek.nix
     ./dotfiles.nix
+    ./desktop.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
@@ -35,7 +36,7 @@
   # environment.
   home.packages =  with pkgs; [
 # utilities
-    neofetch
+    # neofetch discontinued
     htop
     thefuck
     mcfly
@@ -45,6 +46,8 @@
 # term util 
     zellij
     dust
+    mise
+    chezmoi
 # search  tools
     fd 
     silver-searcher
@@ -53,7 +56,6 @@
 # network tools
     nettools
     axel
-    mise
     bat
     fh
 # programming tools
@@ -80,11 +82,33 @@
     doublecmd
     nnn
     ags
+    zoxide
+    iotop
+    pass
+    plocate
+    cloudflare-warp
+    netcat
+    openvpn
+    dig
+    autossh
+    vscode
+    # dbeaver  # db tools. But install using AUR to have latest version. The nix version is very old
+    nwg-displays  # important tool to arrange monitor for wayland/hyprland
+    bottom # enhanced top
+    yt-dlp # youtube-dl fork
+   # tartube # GUI for yt-dlp
+    nix-search-cli
+    deadbeef
+    # vlc
+    # audacious # audio player. But it does not work with wayland
+    # iwd # Not found how to make it works
+   
+    # gparted # not work with wayland
     # discord # unfree, require export NIXPKGS_ALLOW_UNFREE=1 and home-manager switch --impure 
     # spotify #require export NIXPKGS_ALLOW_UNFREE=1, --impure
     # github-desktop # Cannot work yet. App not worth to use at all
     # spotify-qt  # Select one spotify client only
-    # sioyek   # seem 
+    # sioyek   # seem  nix version doesn't work ... 
     # warpd
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -119,8 +143,8 @@
     # '';
   };
 
-  home.file."test.txt".text = "Hello, world!";
-  home.file."test2.txt".source = ./manifest/test.txt;
+  # home.file."test.txt".text = "Hello, world!";
+  # home.file."test2.txt".source = ./manifest/test.txt;
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
